@@ -5,7 +5,7 @@ import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import Rating from '@material-ui/lab/Rating';
 
 import mapStyles from '../../mapStyles';
-import useStyles from './styles.js';
+import useStyles from './main.js';
 
 const Map = ({ coords, places, setCoords, setBounds, setChildClicked, weatherData }) => {
     const matches = useMediaQuery('(min-width:600px)');
@@ -32,7 +32,7 @@ const Map = ({ coords, places, setCoords, setBounds, setChildClicked, weatherDat
                 onChildClick={(child) => setChildClicked(child)}
             >
                 {places.length &&
-                    places.map((place, i) => (
+                    places?.map((place, i) => (
                         <div
                             className={classes.markerContainer}
                             lat={Number(place.latitude)}

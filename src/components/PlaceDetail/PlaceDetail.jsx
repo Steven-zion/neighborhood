@@ -13,7 +13,7 @@ import LocationOnIcon from '@material-ui/icons/LocationOn';
 import PhoneIcon from '@material-ui/icons/Phone';
 import Rating from '@material-ui/lab/Rating';
 
-import useStyles from './styles.js';
+import useStyles from './main.js';
 
 const PlaceDetails = ({ place, selected, refProp }) => {
     if (selected)
@@ -108,7 +108,7 @@ const PlaceDetails = ({ place, selected, refProp }) => {
                     color="primary"
                     onClick={() => window.open(place.web_url, '_blank')}
                 >
-                    Trip Advisor
+                    Neighborhood
                 </Button>
                 <Button
                     size="small"
