@@ -1,4 +1,4 @@
-export const arr = [
+const arr = [
     {
         featureType: 'all',
         elementType: 'all',
@@ -99,3 +99,5 @@ export const arr = [
         ],
     },
 ];
+
+export default arr;

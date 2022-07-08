@@ -36,10 +36,10 @@ const App = () => {
         );
 
         setFilteredPlaces(filtered);
-    }, [rating]);
+    }, [rating, places]);
 
     useEffect(() => {
-        if (bounds) {
+        if (bounds.sw && bounds.ne) {
             setIsLoading(true);
 
             getWeatherData(coords.lat, coords.lng).then((data) =>
@@ -48,14 +48,14 @@ const App = () => {
 
             getPlacesData(type, bounds.sw, bounds.ne).then((data) => {
                 setPlaces(
-                    data.filter((place) => place.name && place.num_reviews > 0)
+                    data?.filter((place) => place.name && place.num_reviews > 0)
                 );
                 setFilteredPlaces([]);
                 setRating('');
                 setIsLoading(false);
             });
         }
-    }, [bounds, type]);
+    }, [bounds, type, coords.lat, coords.lng]);
 
     const onLoad = (autoC) => setAutocomplete(autoC);
 
