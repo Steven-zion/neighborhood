@@ -1,4 +1,4 @@
-const arr = [
+const mapStyles = [
     {
         featureType: 'all',
         elementType: 'all',
@@ -100,4 +100,4 @@ const arr = [
     },
 ];
 
-export default arr;
+export default mapStyles;

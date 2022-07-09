@@ -61,6 +61,7 @@ const Map = ({ coords, places, setCoords, setBounds, setChildClicked, weatherDat
                                                 ? place.photo.images.large.url
                                                 : 'https://www.foodserviceandhospitality.com/wp-content/uploads/2016/09/Restaurant-Placeholder-001.jpg'
                                         }
+                                        alt={place.name}
                                     />
                                     <Rating
                                         name="read-only"
@@ -78,6 +79,7 @@ const Map = ({ coords, places, setCoords, setBounds, setChildClicked, weatherDat
                             <img
                                 src={`https://openweathermap.org/img/w/${data.weather[0].icon}.png`}
                                 height="70px"
+                                alt={data.weather[0].description}
                             />
                         </div>
                     ))}

@@ -10,9 +10,9 @@ export const getPlacesData = async (type, sw, ne) => {
             {
                 params: {
                     bl_latitude: sw.lat,
-                    bl_latitude: sw.lng,
+                    bl_longitude: sw.lng,
                     tr_longitude: ne.lng,
-                    tr_longitude: ne.lat,
+                    tr_latitude: ne.lat,
                 },
                 headers: {
                     'x-rapidapi-key': process.env.REACT_APP_RAPID_API_KEY,
