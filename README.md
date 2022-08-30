@@ -4,3 +4,6 @@
 #### `npm start`
 
 Runs the app in the development mode.
+
+#### Languages used:
+React, Material UI
