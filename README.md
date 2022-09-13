@@ -6,4 +6,4 @@
 Runs the app in the development mode
 
 #### Languages used:
-React, Material UI, Google map api
+React, Material UI, Google map api, places API
